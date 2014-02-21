@@ -1,0 +1,184 @@
+/*!
+ * Skin for Morfy's Comments Plugin
+ */
+.comment-header {
+  margin:-.5em 0 1em;
+  padding-top:2em;
+}
+.comment-list,
+.comment-list li {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.comment-list {margin-bottom:2em}
+.comment-list .comment {
+  border-top:1px dashed #F2F5F5;
+  padding:1em;
+}
+.comment-list-reply {
+  margin-left:1em;
+  padding-left:40px;
+}
+.comment-list-reply .comment-reply {display:none}
+.comment-list-reply .comment {
+  background-color:#F2F5F5;
+  border-top-color:#E3E8E8;
+}
+.comment-list-reply .comment-message {border-top-color:#E3E8E8}
+.comment-list-reply-line-1 div:first-child {
+  text-align:right;
+  margin-top:-2em;
+  padding:1em;
+}
+.comment-avatar {float:left}
+.comment-avatar img {
+  display:block;
+  margin:0;
+  padding:0;
+  max-width:none;
+  max-height:none;
+  min-width:0;
+  min-height:0;
+  background:none;
+  border:none;
+  outline:none;
+  overflow:hidden;
+}
+.comment-detail {overflow:hidden}
+.comment-avatar + .comment-detail {margin-left:50px}
+.comment-avatar + .comment-detail + .comment-message {margin-left:50px}
+.comment-name {
+  font-weight:bold;
+  float:left;
+}
+.comment-time {float:right}
+.comment-message {
+  padding-top:5px;
+  margin-top:5px;
+  border-top:1px solid #F2F5F5;
+}
+.comment-footer-line-1 {text-align:right}
+.comment-pager {
+  margin:0 0 1em;
+  line-height:2.1em;
+}
+.comment-pager a,
+.comment-pager span {
+  display:inline;
+  background-color:#F7F7F7;
+  border:1px solid transparent;
+  color:#aaa;
+  padding:3px 7px;
+  text-decoration:none !important;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+.comment-pager a {
+  background-color:#005C8B;
+  color:white;
+}
+.comment-pager a:focus,
+.comment-pager a:hover {background-color:#156C98}
+span.comment-pager-prev,
+span.comment-pager-next {display:none}
+.comment-form:after,
+.comment-form-reply:after {
+  content:" ";
+  display:table;
+  clear:both;
+}
+.comment-list .comment-form {margin-bottom:10em}
+.comment-list .comment-guest .comment-form {
+  margin-right:-1em;
+  margin-left:-1em;
+}
+.comment-form-name,
+.comment-form-email,
+.comment-form-url,
+.comment-form-math {
+  float:left;
+  clear:left;
+  margin:0 0 10px;
+  width:180px;
+}
+.comment-form-message {margin:0 0 10px 190px}
+.comment-form .comment-form-status {padding-top:2em}
+.comment-form input,
+.comment-form textarea,
+.comment-form-reply input,
+.comment-form-reply textarea {
+  display:block;
+  width:100%;
+}
+.comment-form-message textarea {height:150px}
+.comment-form-math span,
+.comment-form-math input {float:left}
+.comment-form-math span {padding-top:4px}
+.comment-form-math span:after {content:" = "}
+.comment-form-math input {
+  width:30px;
+  margin:0 0 0 10px;
+}
+.comment-form-submit {
+  display:block;
+  float:right;
+}
+.comment-form-cancel {
+  display:block;
+  float:left;
+}
+.comment-is-admin,
+.comment-reply-cancel {
+  font-weight:normal;
+  margin-right:1em;
+  position:relative;
+  top:1px;
+}
+.message-error,
+.message-success {
+  margin:0 0 1em;
+  padding:.9em 1em;
+  line-height:1;
+  border:1px solid;
+  border-radius:3px;
+}
+.message-error {
+  background-color:#FFE8ED;
+  border-color:#F2DCE1;
+  color:#A59395;
+}
+.message-success {
+  background-color:#EAFFE8;
+  border-color:#E1F5DF;
+  color:#A2B2A2;
+}
+
+/* Admin comment style */
+.comment-list .comment-admin {
+  background-color:#F2F5F5;
+  border-top-color:#E3E8E8;
+}
+.comment-list .comment-admin .comment-message {border-top-color:#E3E8E8}
+.comment-list-reply .comment-admin {
+  background-color:#E5EAEA;
+  border-top-color:#D3DBDB;
+}
+.comment-list-reply .comment-admin .comment-message {border-top-color:#D3DBDB}
+
+/* Smaller viewport */
+@media (max-width:600px) {
+  .comment-form-name,
+  .comment-form-email,
+  .comment-form-url,
+  .comment-form-math,
+  .comment-form-message {
+    display:block;
+    float:none;
+    width:auto;
+    margin-left:0;
+    overflow:hidden;
+  }
+  .comment-list-reply {padding-left:1em}
+}
