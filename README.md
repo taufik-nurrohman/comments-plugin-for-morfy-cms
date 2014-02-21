@@ -127,7 +127,7 @@ Place the `comments` folder with its contents in `plugins` folder. Then update y
             )
         );
 
-Add this snippet in your `blog_post.html` that is placed in your `themes` folder to show the comments area:
+Add this snippet to your `blog_post.html` that is placed in your `themes` folder to show the comments area:
 
     <section class="comments">
         <?php Morfy::factory()->runAction('comments'); ?>
