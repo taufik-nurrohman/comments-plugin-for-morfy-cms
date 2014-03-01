@@ -82,6 +82,7 @@ Place the `comments` folder with its contents in `plugins` folder. Then update y
                     'invalid_token' => 'Invalid token.',
                     'invalid_email' => 'Invalid email address.',
                     'is_admin_email' => 'This email already in use.',
+                    'is_user_banned' => 'You have been banned.',
                     'max_length_name' => 'Maximum character length for guest name is {num}',
                     'max_length_url' => 'Maximum character length for guest URL is {num}',
                     'max_length_message' => 'Maximum character length for guest message is {num}',
