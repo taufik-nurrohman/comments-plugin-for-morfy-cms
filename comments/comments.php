@@ -7,7 +7,7 @@
  * @subpackage Plugins
  * @author Taufik Nurrohman <http://latitudu.com>
  * @copyright 2014 Romanenko Sergey / Awilum
- * @version 1.0.0
+ * @version 1.0.1
  *
  */
 
@@ -236,13 +236,17 @@ Morfy::factory()->addAction('comments', function() {
         // If all data entered by guest is valid, insert new data!
         if($notify === "") {
             $new_data = "ID: " . $id . "\nName: " . $name . "\nEmail: " . $email . "\nURL: " . $url . "\nDate: " . $time . "\nMessage: " . $message . "\nRole: " . $role . "\nParent: " . $parent;
-            if( ! empty($old_data)) {
-                create_or_update_file($database, $old_data . "\n" . Morfy::SEPARATOR . "\n" . $new_data); // Append data.
-            } else {
-                create_or_update_file($database, $new_data); // Insert data.
-            }
-
-            $notify = '<p class="' . $_['message'] . $c . $_['success'] . '">' . $config['labels']['comment_success'] . '</p>';
+            // if( ! preg_match('/buy twitter fol|buy|cheap|add your own banning text here|another banning text here/im', $new_data) && ! isset($_SESSION['user_comment_banned'])) {
+                if( ! empty($old_data)) {
+                    create_or_update_file($database, $old_data . "\n" . Morfy::SEPARATOR . "\n" . $new_data); // Append data.
+                } else {
+                    create_or_update_file($database, $new_data); // Insert data.
+                }
+                $notify = '<p class="' . $_['message'] . $c . $_['success'] . '">' . $config['labels']['comment_success'] . '</p>';
+            // } else {
+                // $notify = '<p class="' . $_['message'] . $c . $_['error'] . '">' . $config['labels']['is_user_banned'] . '</p>';
+                // $_SESSION['user_comment_banned'] = true;
+            // }
 
             if($config['email_notify']) {
                 $header  = "From: " . $email . " \r\n";
@@ -456,9 +460,10 @@ Morfy::factory()->addAction('comments', function() {
 
     $html .= '<nav class="' . $_['comment'] . $c . $_['pager'] . '">' . trim($pager) . '</nav>';
 
-    if($count < $config['max']) {
+    if($count < $config['max'] && ! isset($_SESSION['user_comment_banned'])) {
         $html .= comment_form($config, $_, $c, "", $home, $current_url, $total_pages, $param, $is_admin_plugin_installed, $is_admin, $notify, $math, (isset($_GET['reply']) ? $_GET['reply'] : "-"));
     } else {
+        $html .= $notify !== "" ? '<div class="' . $_['comment'] . $c . $_['form'] . $c . $_['status'] . '">' . $notify . '</div>' : "";
         $html .= '<p class="' . $_['comment'] . $c . $_['disabled'] . '">' . $config['labels']['comment_closed'] . '</p>';
     }
 
