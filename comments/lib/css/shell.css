@@ -1,6 +1,7 @@
 /*!
  * Skin for Morfy's Comments Plugin
  */
+
 .comment-header {
   margin:-.5em 0 1em;
   padding-top:2em;
@@ -21,10 +22,6 @@
   padding-left:40px;
 }
 .comment-list-reply .comment-reply {display:none}
-.comment-list-reply .comment {
-  background-color:#F2F5F5;
-  border-top-color:#E3E8E8;
-}
 .comment-list-reply .comment-message {border-top-color:#E3E8E8}
 .comment-list-reply-line-1 div:first-child {
   text-align:right;
@@ -161,11 +158,6 @@ span.comment-pager-next {display:none}
   border-top-color:#E3E8E8;
 }
 .comment-list .comment-admin .comment-message {border-top-color:#E3E8E8}
-.comment-list-reply .comment-admin {
-  background-color:#E5EAEA;
-  border-top-color:#D3DBDB;
-}
-.comment-list-reply .comment-admin .comment-message {border-top-color:#D3DBDB}
 
 /* Smaller viewport */
 @media (max-width:600px) {
