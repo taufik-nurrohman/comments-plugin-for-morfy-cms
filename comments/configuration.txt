@@ -92,6 +92,7 @@ Update your `config.php` file!
                 'comment_closed' => 'Comments has been closed.',
                 'comment_show_all' => 'Remove filter',
                 'comment_reply' => 'Reply',
+                'comment_reply_to' => 'Reply to',
                 'comment_edit' => 'Edit',
                 'comment_save' => 'Update',
                 'comment_cancel' => 'Cancel',
@@ -110,7 +111,10 @@ Update your `config.php` file!
             'per_page' => 100,
 
             // Allowed HTML tags in comment message
-            'allowed_html' => 'b|blockquote|br|code|em|i|ins|mark|pre|q|strong|u',
+            'allowed_html' => 'b,blockquote,br,code,em,i,ins,mark,pre,q,strong,u',
+
+            // Blacklisted keywords
+            'spam_keywords' => 'buy twitter fol,buy,cheap,add your own banning text here,another banning text here',
 
             // Set to `0` to hide the avatar
             'avatar_size' => 40,
