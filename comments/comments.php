@@ -7,7 +7,7 @@
  * @subpackage Plugins
  * @author Taufik Nurrohman <http://latitudu.com>
  * @copyright 2014 Romanenko Sergey / Awilum
- * @version 1.0.2
+ * @version 1.0.3
  *
  */
 
@@ -103,8 +103,8 @@ Morfy::factory()->addAction('comments', function() {
         $data = preg_replace(
             array(
                 // Remove extra line break for possible block element
-                '/<br><(blo|div|fig|p|pre)/i',
-                '/<\/(blo|div|fig|p|pre)><br>/i',
+                '/<br><(blockquote|div|figure|figcaption|p|pre)/i',
+                '/<\/(blockquote|div|figure|figcaption|p|pre)><br>/i',
                 // Symbols ...
                 '/&amp;([a-zA-Z]+|\#[0-9]+);/'
             ),
